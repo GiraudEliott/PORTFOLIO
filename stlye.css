@@ -8,13 +8,13 @@
  }
  
  /* Dark mode */
- @media (prefers-color-scheme: dark) {
+ /* @media (prefers-color-scheme: dark) {
     :root {
         --body-bg: #111111;
         --body-color: #eeeeee;
         --a-color: #eeeeee;
     }
- }
+ } */
 
 @font-face {
     font-family: Roxie;
@@ -35,9 +35,16 @@ body {
 }
 
 h1 {
+    position: absolute;
     text-align: center;
     font-size:130px;
-    /* border: 3px solid green;     */
+    /* border: 3px solid green; */
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
 
 .WorkIndex{
@@ -48,7 +55,7 @@ h1 {
     bottom: 0;
     display: flex;
     justify-content: flex-start;
-    margin: 2vh;
+    margin: 2vw;
 }
 
 .Date{
@@ -60,7 +67,7 @@ h1 {
     bottom: 0;
     display: flex;
     justify-content: flex-start;
-    margin: 2vh;
+    margin: 2vw;
 }
 
 a{
@@ -69,16 +76,25 @@ a{
     
 }
 
-@media only screen and (max-width: 100px) {
+@media only screen and (max-width: 600px) {
 
     h1 {
-       font-size: 3em;
-       margin: 2em;
+       font-size: 25vw;
+       /* margin: 2em; */
+       text-align: center;
     }
  
     h2 {
        font-size: 2em;
        margin: 1em;
+    }
+
+    .Date{
+        display: none;
+    }
+
+    .WorkIndex{
+        display: none;
     }
  
  }
