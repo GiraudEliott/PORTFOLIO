@@ -1,25 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eliott GIRAUD</title>
-    <link rel="stylesheet" href="./stlye.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stlye.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <a href="">
+      <img
+        src="./RESSOURCES/menu-button-pink.png"
+        alt=""
+        class="menu-button-pink"
+      />
+    </a>
 
-</head>
-<body>
+    <a href="">
+      <img
+        src="./RESSOURCES/menu-button-green.png"
+        alt=""
+        class="menu-button-green"
+      />
+    </a>
 
-    <h1>GIRAUD Eliott</h1> 
+    <input
+      id="theme-toggle"
+      class="bouton-theme"
+      type="button"><p class="color-text-theme">color</p>
+    </input>
+    <h1>GIRAUD Eliott</h1>
 
-    <div class="WorkIndex"><p><a href="">Work Index</a></p></div>
-    
+    <div class="WorkIndex">
+      <p><a href="">Work Index</a></p>
+    </div>
+
     <div class="Date"><p>Grenoble / 2022</p></div>
-    
-    <!-- <div class=”responsivebox”></div>
-    
-    <div class=”responsivebox”></div> -->
-    
-</body>
+
+    <script>
+      var toggle = document.getElementById("theme-toggle");
+
+      var storedTheme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: light)").matches
+          ? "dark"
+          : "light");
+      if (storedTheme)
+        document.documentElement.setAttribute("data-theme", storedTheme);
+
+      toggle.onclick = function () {
+        var currentTheme = document.documentElement.getAttribute("data-theme");
+        var targetTheme = "light";
+
+        if (currentTheme === "light") {
+          targetTheme = "dark";
+        }
+
+        document.documentElement.setAttribute("data-theme", targetTheme);
+        localStorage.setItem("theme", targetTheme);
+      };
+    </script>
+  </body>
 </html>
