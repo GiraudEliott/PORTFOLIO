@@ -12,38 +12,44 @@
 
 <body>
 
-    <!-- TEST 1 -->
-    <!-- <p><a href="./index.html">RETOUR A L'ACCEUIL</a></p>
+    <h1>INDEX</h1>
 
-    <p class="nomen"><a href="#">Nomen test</a></p>
-    <p><a href="">Test</a></p>
-    <p><a href="">Deuxieme</a></p>
-    <p><a href="">Troisieme estt</a>
-    <p><a href="">Quatrieme test</a>
-    <p><a href="">5eme test</a>
-    <p><a href="">Sixieme test</a></p>
+    <input id="theme-toggle" class="bouton-theme" type="button">
+    <p class="color-text-theme">color</p>
+    </input>
 
-    <div class="nomen-test">
-        <a href="#">TEST NOMEN</a>
-    </div> -->
+    <ul>
+        <li><a href="#">COMIC</a></li>
+        <li><a href="#">GEISTKRAFT</a></li>
+        <li><a href="#">CapKos</a></li>
+        <li><a href="#">BlAblAblA</a></li>
+        <li><a href="#">Blablantm</a></li>
+    </ul>
 
-    <section class="liste">
-        <ul>
-            <li ><a href="">Test</a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </section>
+    <script>
+        var toggle = document.getElementById("theme-toggle");
 
+        var storedTheme =
+            localStorage.getItem("theme") ||
+            (window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "dark"
+                : "light");
+        if (storedTheme)
+            document.documentElement.setAttribute("data-theme", storedTheme);
+
+        toggle.onclick = function () {
+            var currentTheme = document.documentElement.getAttribute("data-theme");
+            var targetTheme = "light";
+
+            if (currentTheme === "light") {
+                targetTheme = "dark";
+            }
+
+            document.documentElement.setAttribute("data-theme", targetTheme);
+            localStorage.setItem("theme", targetTheme);
+        };
+    </script>
 
 </body>
 
 </html>
-
-<script>
-    let imgChange = () => {
-        document.querySelector('.bg-img').style.backgroudImage = "url(./)"
-    }
-</script>

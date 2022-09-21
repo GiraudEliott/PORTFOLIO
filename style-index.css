@@ -2,7 +2,25 @@
     --background-color: #111111;
     --text-color: #eeeeee;
     --link-color: #eeeeee;
+}
 
+html[data-theme='light'] {
+    --background-color: #eeeeee;
+    --text-color: #111111;
+    --link-color: #111111;
+    --display-green-menu-button:none;
+}
+
+html[data-theme='dark'] {
+    --background-color: #111111;
+    --text-color: #eeeeee;
+    --link-color: #eeeeee;
+    --display-pink-menu-button:none;
+}
+
+[data-theme='light'] .d-block-light,
+[data-theme='dark'] .d-block-dark {
+    display: block !important;
 }
 
 @font-face {
@@ -10,10 +28,6 @@
     font-weight: 1000;
     src: url(./RESSOURCES/Roxie\ rossa.otf);
 }
-
-::-webkit-scrollbar {
-    display: none;
-  }
 
 body {
     font-family: Roxie;
@@ -23,52 +37,89 @@ body {
     transition: all 350ms ease-out;
 }
 
+h1 {
+    text-align: center;
+    font-size: 10vw;
+    /* background-color: blue; */
+    margin: 10vh;
+    z-index: 1;
+    top: 0%;
+    left: auto 
+}
+
+ul {
+    /* background-color: red; */
+    margin: 10vw;
+    list-style: none;
+    text-align: justify;
+}
+
 a {
     position: relative;
-    text-align: center;
-    text-decoration: none;
+    /* text-align: center; */
     color: var(--link-color);
-    text-align: center;
+    text-align: start;
     font-size: 6vw;
-    text-decoration: none;
     /* background-color: green; */
-    margin: 1vw;
+    margin: 2vw;
+    text-decoration: none;
+    
 }
 
-/* p {
-    width: 100%;
-    background-color: red;
-} */
-
-/* HOVER EFFECTS */
-
-.nomen-test:hover{
-    background: url(./MEDIA/index-background-images/NOMEN\ TEST\ 2[3756].png) no-repeat center center fixed !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    transition: 350ms ease-in-out;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    z-index: -1;
+a:hover {
+    color: rgb(0, 255, 0);
 }
 
+#theme-toggle{
+    position: absolute;
+    width: 8vw;
+    height: 3vw;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2vw;
+    margin-left: 1vw;
+    /* background-color: red; */
+    z-index: 1;
+}
+
+.bouton-theme{
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+}
+
+.color-text-theme{
+    font-size: 6vw;
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    margin: 2vw;
+}
 
 @media only screen and (max-width: 600px) {
 
-    h1 {
-        font-size: 25vw;
-        text-align: center;
+    body {
+        margin: 0%;
     }
 
-    #theme-toggle {
+    a {
+        font-size: 10vw;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    #theme-toggle{
         width: 20vw;
         height: 10vw;
+        display: none;
+    
     }
-
-    {
-        width: 15vw;
-    }
-
 }
