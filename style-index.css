@@ -1,0 +1,74 @@
+:root {
+    --background-color: #111111;
+    --text-color: #eeeeee;
+    --link-color: #eeeeee;
+
+}
+
+@font-face {
+    font-family: Roxie;
+    font-weight: 1000;
+    src: url(./RESSOURCES/Roxie\ rossa.otf);
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+body {
+    font-family: Roxie;
+    margin: 3vh;
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: all 350ms ease-out;
+}
+
+a {
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    color: var(--link-color);
+    text-align: center;
+    font-size: 6vw;
+    text-decoration: none;
+    /* background-color: green; */
+    margin: 1vw;
+}
+
+/* p {
+    width: 100%;
+    background-color: red;
+} */
+
+/* HOVER EFFECTS */
+
+.nomen-test:hover{
+    background: url(./MEDIA/index-background-images/NOMEN\ TEST\ 2[3756].png) no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    transition: 350ms ease-in-out;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    z-index: -1;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 25vw;
+        text-align: center;
+    }
+
+    #theme-toggle {
+        width: 20vw;
+        height: 10vw;
+    }
+
+    {
+        width: 15vw;
+    }
+
+}

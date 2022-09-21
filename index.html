@@ -1,65 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eliott GIRAUD</title>
     <link rel="stylesheet" href="./stlye.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
+</head>
+
+<body>
     <a href="">
-      <img
-        src="./RESSOURCES/menu-button-pink.png"
-        alt=""
-        class="menu-button-pink"
-      />
+        <img src="./RESSOURCES/menu-button-pink.png" alt="" class="menu-button-pink" />
     </a>
 
     <a href="">
-      <img
-        src="./RESSOURCES/menu-button-green.png"
-        alt=""
-        class="menu-button-green"
-      />
+        <img src="./RESSOURCES/menu-button-green.png" alt="" class="menu-button-green" />
     </a>
 
-    <input
-      id="theme-toggle"
-      class="bouton-theme"
-      type="button"><p class="color-text-theme">color</p>
+    <input id="theme-toggle" class="bouton-theme" type="button">
+    <p class="color-text-theme">color</p>
     </input>
     <h1>GIRAUD Eliott</h1>
 
     <div class="WorkIndex">
-      <p><a href="">Work Index</a></p>
+        <p><a href="./work-index.html">Work Index</a></p>
     </div>
 
-    <div class="Date"><p>Grenoble / 2022</p></div>
+    <div class="Date">
+        <p>Grenoble / 2022</p>
+    </div>
 
     <script>
-      var toggle = document.getElementById("theme-toggle");
+        var toggle = document.getElementById("theme-toggle");
 
-      var storedTheme =
-        localStorage.getItem("theme") ||
-        (window.matchMedia("(prefers-color-scheme: light)").matches
-          ? "dark"
-          : "light");
-      if (storedTheme)
-        document.documentElement.setAttribute("data-theme", storedTheme);
+        var storedTheme =
+            localStorage.getItem("theme") ||
+            (window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "dark"
+                : "light");
+        if (storedTheme)
+            document.documentElement.setAttribute("data-theme", storedTheme);
 
-      toggle.onclick = function () {
-        var currentTheme = document.documentElement.getAttribute("data-theme");
-        var targetTheme = "light";
+        toggle.onclick = function () {
+            var currentTheme = document.documentElement.getAttribute("data-theme");
+            var targetTheme = "light";
 
-        if (currentTheme === "light") {
-          targetTheme = "dark";
-        }
+            if (currentTheme === "light") {
+                targetTheme = "dark";
+            }
 
-        document.documentElement.setAttribute("data-theme", targetTheme);
-        localStorage.setItem("theme", targetTheme);
-      };
+            document.documentElement.setAttribute("data-theme", targetTheme);
+            localStorage.setItem("theme", targetTheme);
+        };
     </script>
-  </body>
+</body>
+
 </html>
