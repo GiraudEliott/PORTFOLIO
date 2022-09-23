@@ -158,7 +158,10 @@ a{
     #theme-toggle{
         width: 20vw;
         height: 10vw;
-    
+    }
+
+    .color-text-theme{
+        top: 1vh;
     }
  
  }

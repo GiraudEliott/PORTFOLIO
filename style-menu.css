@@ -31,58 +31,49 @@ html[data-theme='dark'] {
 
 body {
     font-family: Roxie;
-    margin: 3vh;
     background: var(--background-color);
     color: var(--text-color);
     transition: all 350ms ease-out;
     -ms-overflow-style: none;
-    /* for Internet Explorer, Edge */
     scrollbar-width: none;
-    /* for Firefox */
-    overflow-y: scroll;
+    overflow-y: scroll; 
 }
 
-body::-webkit-scrollbar {
-    display: none;
-    /* for Chrome, Safari, and Opera */
-}
-
-h1 {
-    text-align: center;
-    font-size: 10vw;
-    /* background-color: blue; */
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    z-index: 1;
-    top: 0%;
-    left: auto
-}
-
-ul {
-    /* background-color: red; */
-    margin: 10vw;
-    list-style: none;
-    text-align: justify;
-}
-
-a {
-    position: relative;
-    color: var(--link-color);
+li{
     text-align: start;
-    font-size: 5vw;
-    margin: 2vw;
-    text-decoration: none;
+    list-style: none;
+    margin: 3vh;
     transition-duration: 0, 2s;
-
+    /* background-color: blue; */
 }
 
 li a:hover {
-    /* color: rgb(0, 255, 0); */
     padding-left: 50px;
     transition-duration: 0.2s;
 }
 
-#theme-toggle {
+ul{
+    padding-top: 5vh;
+    /* background-color: green; */
+    margin-top: 10vw;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    text-align: center;
+}
+a{
+    display: inline-block;
+    font-size: 10vh;
+    list-style: none;
+    text-decoration: none;
+    color: var(--link-color);
+    margin-left: 10vw;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+  #theme-toggle {
     position: absolute;
     width: 8vw;
     height: 3vw;
@@ -148,24 +139,23 @@ li a:hover {
         font-size: 10vw;
     }
 
-    h1 {
-        font-size: 70px;
-    }
-
-    #theme-toggle {
+    #theme-toggle{
         width: 20vw;
         height: 10vw;
     }
 
     .menu-button-pink {
         width: 5em;
+        display: none;
     }
 
     .menu-button-green {
         width: 5em;
+        display: none;
     }
 
-    .color-text-theme{
-        top: 1vh;
+    ul{
+        margin-left: 0vh;
+        margin-right: 0vh;
     }
 }
