@@ -1,0 +1,131 @@
+:root {
+    --background-color: #111111;
+    --text-color: #eeeeee;
+    --link-color: #eeeeee;
+}
+
+html[data-theme='light'] {
+    --background-color: #eeeeee;
+    --text-color: #111111;
+    --link-color: #111111;
+    --display-green-menu-button: none;
+}
+
+html[data-theme='dark'] {
+    --background-color: #111111;
+    --text-color: #eeeeee;
+    --link-color: #eeeeee;
+    --display-pink-menu-button: none;
+}
+
+[data-theme='light'] .d-block-light,
+[data-theme='dark'] .d-block-dark {
+    display: block !important;
+}
+
+@font-face {
+    font-family: Roxie;
+    font-weight: 1000;
+    src: url(./RESSOURCES/Roxie\ rossa.otf);
+}
+
+body {
+    font-family: Roxie;
+    margin: 3vh;
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: all 350ms ease-out;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+  #theme-toggle {
+    position: absolute;
+    width: 8vw;
+    height: 3vw;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2vw;
+    margin-left: 1vw;
+    /* background-color: red; */
+    z-index: 1;
+}
+
+.bouton-theme {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.color-text-theme {
+    font-size: 6vw;
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    margin: 2vw;
+}
+
+.menu-button-pink {
+    position: absolute;
+    width: 6vw;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2vw;
+    margin-right: 1vw;
+    display: var(--display-pink-menu-button)
+}
+
+.menu-button-green {
+    position: absolute;
+    width: 6vw;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2vw;
+    margin-right: 1vw;
+    display: var(--display-green-menu-button);
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        margin: 0%;
+    }
+
+    a {
+        font-size: 10vw;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    #theme-toggle {
+        width: 20vw;
+        height: 10vw;
+        display: none;
+
+    }
+
+    .menu-button-pink {
+        width: 5em;
+    }
+
+    .menu-button-green {
+        width: 5em;
+    }
+}
